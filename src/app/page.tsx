@@ -2,7 +2,7 @@
 
 import { Button, Heading, Paragraph, Text, Badge, Spinner, Icon, Input, Textarea } from '@/components/atoms'
 import { Card, ProjectCard, BlogCard, VideoCard, SkillItem, SocialLink } from '@/components/molecules'
-import { Navbar, HeroSection, Footer, SkillsSection, AboutSection, ProjectsSection, ContactSection } from '@/components/organisms'
+import { Navbar, HeroSection, Footer, SkillsSection, AboutSection, ProjectsSection, ContactSection, BlogSection, YouTubeSection } from '@/components/organisms'
 import { ChevronRight, Github, Mail, ExternalLink, Code, Database, Server } from 'lucide-react'
 
 export default function Home() {
@@ -243,24 +243,11 @@ export default function Home() {
         {/* Contact Section */}
         <ContactSection />
 
-        {/* Future sections placeholder */}
-        <section id="blog" className="section-spacing">
-          <div className="container-custom text-center">
-            <Heading as="h2" variant="section" className="mb-8">
-              Blog
-            </Heading>
-            <Text color="secondary">Seção em desenvolvimento...</Text>
-          </div>
-        </section>
+        {/* Blog Section */}
+        <BlogSection />
 
-        <section id="videos" className="section-spacing">
-          <div className="container-custom text-center">
-            <Heading as="h2" variant="section" className="mb-8">
-              Vídeos
-            </Heading>
-            <Text color="secondary">Seção em desenvolvimento...</Text>
-          </div>
-        </section>
+        {/* YouTube Section */}
+        <YouTubeSection />
 
       </main>
       

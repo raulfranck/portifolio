@@ -44,8 +44,8 @@
 - [x] **AboutSection** - Sobre mim ✨
 - [x] **SkillsSection** - Habilidades técnicas ✨
 - [x] **ProjectsSection** - Galeria de projetos ✨
-- [ ] **BlogSection** - Posts recentes do blog
-- [ ] **YouTubeSection** - Vídeos recentes
+- [x] **BlogSection** - Posts recentes do blog ✨
+- [x] **YouTubeSection** - Vídeos recentes ✨
 - [x] **ContactSection** - Formulário de contato ✨
 - [x] **Footer** - Rodapé com links, tecnologias e animações
 
