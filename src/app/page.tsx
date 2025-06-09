@@ -1,8 +1,9 @@
 'use client'
 
 import { Button, Heading, Paragraph, Text, Badge, Spinner, Icon, Input, Textarea } from '@/components/atoms'
-import { Navbar, HeroSection, Footer } from '@/components/organisms'
-import { ChevronRight, Github, Mail, ExternalLink } from 'lucide-react'
+import { Card, ProjectCard, BlogCard, VideoCard, SkillItem, SocialLink } from '@/components/molecules'
+import { Navbar, HeroSection, Footer, SkillsSection } from '@/components/organisms'
+import { ChevronRight, Github, Mail, ExternalLink, Code, Database, Server } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -124,6 +125,114 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Demo Section - Molecules */}
+        <section className="section-spacing border-t border-bg-secondary">
+          <div className="container-custom">
+            <div className="text-center space-y-12">
+              <Heading as="h2" variant="section">
+                Componentes <Text color="purple">Molecules</Text> Criados
+              </Heading>
+              
+              {/* Cards showcase */}
+              <div className="space-y-8">
+                <Heading as="h3" variant="subsection" color="secondary">Cards Base</Heading>
+                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                   <Card variant="default" animated={false}>
+                     <Text>Card Default</Text>
+                   </Card>
+                   <Card variant="elevated" animated={false}>
+                     <Text>Card Elevated</Text>
+                   </Card>
+                   <Card variant="bordered" animated={false}>
+                     <Text>Card Bordered</Text>
+                   </Card>
+                   <Card variant="glass" animated={false}>
+                     <Text>Card Glass</Text>
+                   </Card>
+                 </div>
+              </div>
+
+              {/* Project Cards */}
+              <div className="space-y-8">
+                <Heading as="h3" variant="subsection" color="secondary">Project Cards</Heading>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <ProjectCard
+                    title="Portfolio Website"
+                    description="Meu portfólio pessoal criado com Next.js, TypeScript e Tailwind CSS. Design moderno e responsivo."
+                    image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+                    technologies={['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']}
+                    githubUrl="https://github.com"
+                    liveUrl="https://example.com"
+                    featured
+                  />
+                  <ProjectCard
+                    title="E-commerce App"
+                    description="Aplicação de e-commerce completa com carrinho de compras e sistema de pagamento."
+                    image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
+                    technologies={['React', 'Node.js', 'MongoDB']}
+                    githubUrl="https://github.com"
+                  />
+                </div>
+              </div>
+
+              {/* Skills Items */}
+              <div className="space-y-8">
+                <Heading as="h3" variant="subsection" color="secondary">Skill Items</Heading>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <SkillItem
+                    name="React"
+                    experience="4 anos"
+                    category="frontend"
+                    variant="detailed"
+                    description="Biblioteca para interfaces de usuário"
+                  />
+                  <SkillItem
+                    name="Node.js"
+                    experience="3 anos"
+                    category="backend"
+                  />
+                  <SkillItem
+                    name="MongoDB"
+                    experience="2 anos"
+                    category="database"
+                    variant="compact"
+                  />
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="space-y-8">
+                <Heading as="h3" variant="subsection" color="secondary">Social Links</Heading>
+                <div className="flex justify-center gap-6">
+                  <SocialLink
+                    href="https://github.com"
+                    icon={Github}
+                    label="GitHub"
+                    variant="default"
+                    showLabel
+                  />
+                                     <SocialLink
+                     href="https://linkedin.com"
+                     icon={ExternalLink}
+                     label="LinkedIn"
+                     variant="card"
+                     size="lg"
+                   />
+                  <SocialLink
+                    href="mailto:test@example.com"
+                    icon={Mail}
+                    label="Email"
+                    variant="minimal"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section - Real */}
+        <SkillsSection />
 
         {/* Seções futuras placeholder */}
         <section id="projetos" className="section-spacing">

@@ -17,18 +17,18 @@
 - [x] **Input** - Campo de entrada com validação visual e variantes
 - [x] **Textarea** - Área de texto para formulários com auto-resize
 - [x] **Icon** - Wrapper para ícones do Lucide React com animações
-- [ ] **Logo** - Componente do logo pessoal
+- [x] **Logo** - Componente do logo pessoal
 - [x] **Badge** - Tags para tecnologias/skills com animações
 - [x] **Spinner** - Loading states com 4 variantes (spinner, dots, pulse, bars)
 
-### 2.2 Molecules (Combinações Simples)
-- [ ] **Card** - Container base para conteúdo
-- [ ] **ProjectCard** - Card específico para projetos
-- [ ] **BlogCard** - Card para posts do blog
-- [ ] **VideoCard** - Card para vídeos do YouTube
-- [ ] **SkillItem** - Item individual de habilidade
-- [ ] **SocialLink** - Link para redes sociais
-- [ ] **ContactField** - Campo de formulário completo
+### 2.2 Molecules (Combinações Simples) - CONCLUÍDA
+- [x] **Card** - Container base reutilizável com 4 variantes e animações
+- [x] **ProjectCard** - Card específico para projetos com image overlay e actions
+- [x] **BlogCard** - Card para posts do blog com meta info e tags
+- [x] **VideoCard** - Card para vídeos do YouTube com play button e duração
+- [x] **SkillItem** - Item individual de habilidade com proficiency bar e categorias
+- [x] **SocialLink** - Link para redes sociais com 3 variantes e animações
+- [x] **ContactField** - Campo de formulário completo com validação visual
 
 ---
 
