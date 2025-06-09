@@ -2,7 +2,7 @@
 
 import { Button, Heading, Paragraph, Text, Badge, Spinner, Icon, Input, Textarea } from '@/components/atoms'
 import { Card, ProjectCard, BlogCard, VideoCard, SkillItem, SocialLink } from '@/components/molecules'
-import { Navbar, HeroSection, Footer, SkillsSection } from '@/components/organisms'
+import { Navbar, HeroSection, Footer, SkillsSection, AboutSection, ProjectsSection, ContactSection } from '@/components/organisms'
 import { ChevronRight, Github, Mail, ExternalLink, Code, Database, Server } from 'lucide-react'
 
 export default function Home() {
@@ -231,19 +231,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section - Real */}
+        {/* About Section */}
+        <AboutSection />
+
+        {/* Skills Section */}
         <SkillsSection />
 
-        {/* Seções futuras placeholder */}
-        <section id="projetos" className="section-spacing">
-          <div className="container-custom text-center">
-            <Heading as="h2" variant="section" className="mb-8">
-              Projetos
-            </Heading>
-            <Text color="secondary">Seção em desenvolvimento...</Text>
-          </div>
-        </section>
+        {/* Projects Section */}
+        <ProjectsSection showAll={false} />
 
+        {/* Contact Section */}
+        <ContactSection />
+
+        {/* Future sections placeholder */}
         <section id="blog" className="section-spacing">
           <div className="container-custom text-center">
             <Heading as="h2" variant="section" className="mb-8">
@@ -257,15 +257,6 @@ export default function Home() {
           <div className="container-custom text-center">
             <Heading as="h2" variant="section" className="mb-8">
               Vídeos
-            </Heading>
-            <Text color="secondary">Seção em desenvolvimento...</Text>
-          </div>
-        </section>
-
-        <section id="contato" className="section-spacing">
-          <div className="container-custom text-center">
-            <Heading as="h2" variant="section" className="mb-8">
-              Contato
             </Heading>
             <Text color="secondary">Seção em desenvolvimento...</Text>
           </div>

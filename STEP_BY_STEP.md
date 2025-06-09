@@ -41,12 +41,12 @@
 
 ### 3.2 Sections
 - [x] **HeroSection** - Seção principal com introdução, animações e efeitos visuais
-- [ ] **AboutSection** - Sobre mim
-- [ ] **SkillsSection** - Habilidades técnicas
-- [ ] **ProjectsSection** - Galeria de projetos
+- [x] **AboutSection** - Sobre mim ✨
+- [x] **SkillsSection** - Habilidades técnicas ✨
+- [x] **ProjectsSection** - Galeria de projetos ✨
 - [ ] **BlogSection** - Posts recentes do blog
 - [ ] **YouTubeSection** - Vídeos recentes
-- [ ] **ContactSection** - Formulário de contato
+- [x] **ContactSection** - Formulário de contato ✨
 - [x] **Footer** - Rodapé com links, tecnologias e animações
 
 ---
