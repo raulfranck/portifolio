@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Heading, Paragraph, Text, Badge, Spinner, Icon } from '@/components/atoms'
+import { Button, Heading, Paragraph, Text, Badge, Spinner, Icon, Input, Textarea } from '@/components/atoms'
 import { ChevronRight, Github, Mail, ExternalLink } from 'lucide-react'
 
 export default function Home() {
@@ -133,6 +133,44 @@ export default function Home() {
                   <Spinner variant="bars" color="accent" />
                   <Text variant="small">Bars</Text>
                 </div>
+              </div>
+            </div>
+            
+            {/* Form Controls showcase */}
+            <div className="space-y-6">
+              <Heading as="h3" variant="subsection" color="secondary">Formulários</Heading>
+              <div className="max-w-md mx-auto space-y-6">
+                <Input
+                  label="Nome"
+                  placeholder="Digite seu nome"
+                  variant="outlined"
+                />
+                <Input
+                  label="Email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  variant="filled"
+                  leftIcon={<Icon icon={Mail} size="sm" />}
+                />
+                <Input
+                  label="Campo com erro"
+                  placeholder="Digite algo..."
+                  variant="minimal"
+                  error="Este campo é obrigatório"
+                />
+                <Textarea
+                  label="Mensagem"
+                  placeholder="Escreva sua mensagem aqui..."
+                  variant="outlined"
+                  rows={4}
+                />
+                <Textarea
+                  label="Comentário (Auto-resize)"
+                  placeholder="Digite e veja o campo crescer automaticamente..."
+                  variant="filled"
+                  autoResize
+                  rows={2}
+                />
               </div>
             </div>
           </div>

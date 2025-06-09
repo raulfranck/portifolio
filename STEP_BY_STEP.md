@@ -15,7 +15,7 @@
 - [x] **Button** - Botão com variantes (primary, secondary, outline, ghost)
 - [x] **Typography** - Componentes de texto (Heading, Paragraph, Text, AnimatedText)
 - [x] **Input** - Campo de entrada com validação visual e variantes
-- [ ] **Textarea** - Área de texto para formulários
+- [x] **Textarea** - Área de texto para formulários com auto-resize
 - [x] **Icon** - Wrapper para ícones do Lucide React com animações
 - [ ] **Logo** - Componente do logo pessoal
 - [x] **Badge** - Tags para tecnologias/skills com animações
