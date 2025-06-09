@@ -1,0 +1,119 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## 📌 Stack Tecnológica
+- Utilize **Next.js (App Router)** como base do projeto.
+- Estilização com **Tailwind CSS**, com customização no `tailwind.config.js` para refletir a paleta de cores personalizada.
+- **Framer Motion** para animações de entrada, transições de seção, e efeitos visuais interativos.
+- **TypeScript** obrigatório.
+- Utilização de **Atomic Design** na estrutura dos componentes (`atoms`, `molecules`, `organisms`, `templates`, `pages`).
+- Use **YouTube API v3** para buscar thumbnails e dados dos vídeos.
+- Integração futura com **RSS Feed (Dev.to ou Medium)** para exibir posts do blog.
+- Otimização para **mobile-first**.
+
+---
+
+## 🎨 Paleta de Cores - Tema Escuro Moderno
+
+### Base
+- `bg-primary`: `#0E0E10` (fundo principal)
+- `bg-secondary`: `#1C1C1F`
+- `bg-tertiary`: `#2E2E33`
+
+### Texto
+- `text-primary`: `#E4E4E7`
+- `text-secondary`: `#A1A1AA`
+- `text-accent`: `#F4F4F5`
+
+### Acentos
+- `accent-green`: `#00FFC6`
+- `accent-purple`: `#7F5AF0`
+- `accent-yellow`: `#FFD600`
+
+---
+
+## 🔤 Tipografia
+
+### Títulos (Headings)
+- Fonte: `General Sans` ou alternativa como `Satoshi`, `Clash Display`
+- Peso: 600+
+- Estilo: Uppercase ou espaçamento generoso entre letras
+
+### Texto Corrido
+- Fonte: `Inter` ou `Manrope`
+- Peso: 400–500
+- Linhas com espaçamento confortável
+
+---
+
+## ✨ Diretrizes de Design / UI
+
+- **Atomic Design**: componentes devem seguir estrutura modular, reutilizável, escalável.
+- Use **layout fluido** com espaçamento harmônico e grid baseado em 8px.
+- **Responsividade** nativa, com prioridade no mobile-first.
+- **Hover states** animados (utilize `accent-green` e `accent-purple`).
+- Elementos devem ter **cantinhos arredondados (rounded-2xl)** e **sombras suaves (shadow-xl)**.
+- Cards e blocos com leve **efeito de glassmorphism** opcional (`bg-opacity` + `backdrop-blur`).
+- O **cursor pode ser customizado** com efeito magnético ou responsivo ao hover.
+
+---
+
+## 🎥 Interatividade Criativa
+
+- Use **Framer Motion** para:
+  - Entradas suaves (`fade-in`, `slide-up`)
+  - Scroll-triggered animations
+  - Transições entre páginas
+  - **Animações de parallax** com camadas e profundidade
+
+- **Efeito Parallax**:
+  - Aplique principalmente em seções de destaque, como o hero, background de projetos, ou galeria de vídeos.
+  - Pode ser feito via `Framer Motion` + `scrollYProgress` + Tailwind utilities com custom transform/translate.
+
+- **Cursor Customizado**:
+  - Use CSS + JS ou Framer Motion para criar um cursor responsivo (magnético ou com trailing effect).
+
+- **Blog**:
+  - Carregar posts via RSS (Medium ou Dev.to)
+  - Exibir título, tags e thumbnail (se houver)
+  - Animação ao scroll com parallax e fade-in
+
+- **YouTube Integration**:
+  - Buscar os últimos vídeos automaticamente
+  - Mostrar thumbnails no estilo galeria
+  - Animar com zoom sutil no hover
+  - Link para assistir diretamente no YouTube
+
+- **Contato**:
+  - Crie formulário de contato
+
+---
+
+## 🧠 Comportamento e UX
+
+- Navegação fluida com barra fixa, menu hamburger animado no mobile
+- Scroll suave entre seções
+- Botão de "voltar ao topo" animado
+- Use loaders elegantes em páginas internas
+- Modo escuro por padrão (sem toggle inicialmente)
+- SEO básico implementado com metatags dinâmicas
+
+---
+
+## 🚧 Estrutura de Pastas (Sugestão)
+
+src/
+├── app/
+├── components/
+│ ├── atoms/
+│ ├── molecules/
+│ ├── organisms/
+│ ├── templates/
+│ └── layout/
+├── lib/ # serviços e APIs
+├── styles/
+│ └── tailwind.config.ts
+
+└── public/
