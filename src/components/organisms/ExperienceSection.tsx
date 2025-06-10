@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, Calendar, MapPin, Award, ExternalLink } from 'lucide-react'
 import { Heading, Text, Badge, Button } from '@/components/atoms'
-import { Modal, ExperienceItem } from '@/components/molecules'
+import { Modal, ExperienceItem, AnimatedTimeline, MagneticCursor } from '@/components/molecules'
 import { TechStack } from '@/components/atoms'
 
 interface Experience {
@@ -158,6 +158,7 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
 
   return (
     <>
+      <MagneticCursor />
       <section id="experiencia" className={`section-spacing ${className}`}>
         <div className="container-custom">
           {/* Header */}
@@ -177,17 +178,19 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
             </Text>
           </motion.div>
 
-          {/* Timeline */}
-          <div className="relative max-w-6xl mx-auto">
-            {experiences.map((experience, index) => (
-              <ExperienceItem
-                key={experience.id}
-                experience={experience}
-                index={index}
-                isLast={index === experiences.length - 1}
-                onClick={() => handleExperienceClick(experience)}
-              />
-            ))}
+          {/* Animated Timeline */}
+          <div className="relative max-w-6xl mx-auto" data-magnetic>
+            <AnimatedTimeline className="py-8">
+              {experiences.map((experience, index) => (
+                <ExperienceItem
+                  key={experience.id}
+                  experience={experience}
+                  index={index}
+                  isLast={index === experiences.length - 1}
+                  onClick={() => handleExperienceClick(experience)}
+                />
+              ))}
+            </AnimatedTimeline>
           </div>
 
           {/* Summary Stats */}
