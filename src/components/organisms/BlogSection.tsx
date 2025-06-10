@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Heading, Text, Button } from '@/components/atoms'
 import { BlogCard } from '@/components/molecules'
 import { ExternalLink, Calendar, Clock, Eye, ArrowRight } from 'lucide-react'
+import { formatNumber, formatDate } from '@/lib/utils'
 
 interface BlogPost {
   id: string
@@ -105,13 +106,7 @@ const BlogSection = ({ showAll = false, className = '' }: BlogSectionProps) => {
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = displayedPosts.filter(post => !post.featured)
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-  }
+
 
   return (
     <section id="blog" className={`section-spacing ${className}`}>
@@ -211,7 +206,7 @@ const BlogSection = ({ showAll = false, className = '' }: BlogSectionProps) => {
           
           <div className="text-center p-6 bg-bg-secondary rounded-xl border border-bg-tertiary">
             <div className="text-3xl font-bold text-accent-purple mb-2">
-              {blogPosts.reduce((acc, post) => acc + post.views, 0).toLocaleString()}
+              {formatNumber(blogPosts.reduce((acc, post) => acc + post.views, 0))}
             </div>
             <Text variant="small" color="secondary">
               Visualizações Totais

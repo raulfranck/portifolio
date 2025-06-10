@@ -5,6 +5,7 @@ import { Clock, Calendar, ExternalLink, Eye } from 'lucide-react'
 import { Heading, Paragraph, Text, Badge, Icon, Button } from '@/components/atoms'
 import Card from './Card'
 import Image from 'next/image'
+import { formatDate } from '@/lib/utils'
 
 interface BlogCardProps {
   title: string
@@ -30,13 +31,7 @@ const BlogCard = ({
   animated = true
 }: BlogCardProps) => {
   
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
-  }
+
 
   return (
     <Card

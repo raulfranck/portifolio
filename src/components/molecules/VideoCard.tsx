@@ -5,6 +5,7 @@ import { Play, Clock, Calendar, ExternalLink, Eye } from 'lucide-react'
 import { Heading, Paragraph, Text, Badge, Icon, Button } from '@/components/atoms'
 import Card from './Card'
 import Image from 'next/image'
+import { formatDateShort, formatViewsWithLabel } from '@/lib/utils'
 
 interface VideoCardProps {
   title: string
@@ -30,23 +31,7 @@ const VideoCard = ({
   animated = true
 }: VideoCardProps) => {
   
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    })
-  }
 
-  const formatViews = (views: string) => {
-    const num = parseInt(views)
-    if (num >= 1000000) {
-      return `${(num / 1000000).toFixed(1)}M views`
-    } else if (num >= 1000) {
-      return `${(num / 1000).toFixed(1)}K views`
-    }
-    return `${num} views`
-  }
 
   return (
     <Card
@@ -105,12 +90,12 @@ const VideoCard = ({
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <Icon icon={Calendar} size="xs" />
-                <Text variant="small">{formatDate(publishedAt)}</Text>
+                <Text variant="small">{formatDateShort(publishedAt)}</Text>
               </div>
               
               <div className="flex items-center gap-1">
                 <Icon icon={Eye} size="xs" />
-                <Text variant="small">{formatViews(viewCount)}</Text>
+                <Text variant="small">{formatViewsWithLabel(parseInt(viewCount))}</Text>
               </div>
             </div>
             

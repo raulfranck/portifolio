@@ -117,13 +117,6 @@
 
 ---
 
-## 🎭 Fase 8: Personalização Avançada
-### 8.1 Tema Dinâmico
-- [ ] **ThemeProvider** - Context para temas
-- [ ] **ColorPalette** - Paleta de cores dinâmica
-- [ ] **DarkModeToggle** - Alternar modo escuro/claro
-- [ ] **CustomThemes** - Temas personalizados
-
 ### 8.2 Interações Avançadas
 - [ ] **MouseFollower** - Elemento que segue o mouse
 - [ ] **ScrollTriggers** - Gatilhos de animação por scroll

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Heading, Text, Button } from '@/components/atoms'
 import { VideoCard } from '@/components/molecules'
 import { ExternalLink, Play, Users, Eye, ArrowRight, Youtube } from 'lucide-react'
+import { formatDate, formatViews } from '@/lib/utils'
 
 interface YouTubeVideo {
   id: string
@@ -108,22 +109,7 @@ const YouTubeSection = ({ showAll = false, className = '' }: YouTubeSectionProps
   const totalViews = youtubeVideos.reduce((acc, video) => acc + video.views, 0)
   const totalLikes = youtubeVideos.reduce((acc, video) => acc + video.likes, 0)
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-  }
 
-  const formatViews = (views: number) => {
-    if (views >= 1000000) {
-      return `${(views / 1000000).toFixed(1)}M`
-    } else if (views >= 1000) {
-      return `${(views / 1000).toFixed(1)}k`
-    }
-    return views.toString()
-  }
 
   return (
     <section id="videos" className={`section-spacing ${className}`}>
