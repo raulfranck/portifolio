@@ -6,7 +6,9 @@ import {
   SiTailwindcss, SiMongodb, SiPostgresql, SiDocker, SiGit,
   SiPython, SiFigma, SiFramer, SiVercel, SiGithub,
   SiHtml5, SiCss3, SiExpress, SiPrisma, SiRedis,
-  SiGooglecloud, SiFirebase, SiSupabase, SiStripe
+  SiGooglecloud, SiFirebase, SiSupabase, SiStripe,
+  SiOpenai, SiTensorflow, SiAmazon, SiGithubactions,
+  SiNestjs, SiFastapi
 } from 'react-icons/si'
 import { 
   DiJava, DiPhp, DiMysql, DiSass, DiBootstrap,
@@ -48,6 +50,9 @@ const techIconMap: Record<string, IconType> = {
   'java': DiJava,
   'php': DiPhp,
   'laravel': FaLaravel,
+  'fastapi': SiFastapi,
+  'nest.js': SiNestjs,
+  'nestjs': SiNestjs,
 
   // Database
   'mongodb': SiMongodb,
@@ -62,10 +67,35 @@ const techIconMap: Record<string, IconType> = {
   'docker': SiDocker,
   'git': SiGit,
   'github': SiGithub,
+  'github actions': SiGithubactions,
+  'githubactions': SiGithubactions,
   'vercel': SiVercel,
   'gcp': SiGooglecloud,
+  'aws': SiAmazon,
   'firebase': SiFirebase,
   'supabase': SiSupabase,
+
+  // AI & ML
+  'openai api': SiOpenai,
+  'openai': SiOpenai,
+  'tensorflow': SiTensorflow,
+  'langchain': SiPython, // usando Python como fallback
+  'hugging face': SiPython, // usando Python como fallback
+  'python ml': SiPython,
+  'rag systems': SiPython, // usando Python como fallback
+  'vector dbs': SiPython, // usando Python como fallback
+  'langgraph': SiPython,
+  'autogen': SiPython,
+  'crewai': SiPython,
+  'multi-agent': SiPython,
+  'kubernetes': SiDocker, // usando Docker como similar
+  'serverless': SiGooglecloud,
+  'embedding systems': SiPython,
+  'rag architecture': SiPython,
+  'llm orchestration': SiPython,
+  'smart caching': SiRedis,
+  'ai-native apis': SiPython,
+  'semantic search': SiPython,
 
   // Others
   'figma': SiFigma,
@@ -79,6 +109,7 @@ const categoryColors: Record<string, string> = {
   backend: '#7F5AF0',  // accent-purple
   database: '#FFD600', // accent-yellow
   devops: '#E4E4E7',   // text-accent
+  ai: '#00FFC6',       // accent-green
   design: '#F4F4F5',   // text-accent
   other: '#A1A1AA'     // text-secondary
 }
@@ -114,6 +145,9 @@ const techCategories: Record<string, string> = {
   java: 'backend',
   php: 'backend',
   laravel: 'backend',
+  fastapi: 'backend',
+  'nest.js': 'backend',
+  nestjs: 'backend',
 
   mongodb: 'database',
   mongo: 'database',
@@ -126,10 +160,37 @@ const techCategories: Record<string, string> = {
   docker: 'devops',
   git: 'devops',
   github: 'devops',
+  'github actions': 'devops',
+  githubactions: 'devops',
   vercel: 'devops',
   gcp: 'devops',
+  aws: 'devops',
   firebase: 'devops',
   supabase: 'devops',
+
+  // AI & ML
+  'openai api': 'ai',
+  openai: 'ai',
+  tensorflow: 'ai',
+  langchain: 'ai',
+  'hugging face': 'ai',
+  'python ml': 'ai',
+  'rag systems': 'ai',
+  'vector dbs': 'ai',
+  langgraph: 'ai',
+  autogen: 'ai',
+  crewai: 'ai',
+  'multi-agent': 'ai',
+  'embedding systems': 'ai',
+  'rag architecture': 'ai',
+  'llm orchestration': 'ai',
+  'ai-native apis': 'ai',
+  'semantic search': 'ai',
+
+  // DevOps & Cloud
+  kubernetes: 'devops',
+  serverless: 'devops',
+  'smart caching': 'devops',
 
   figma: 'design',
   stripe: 'other',

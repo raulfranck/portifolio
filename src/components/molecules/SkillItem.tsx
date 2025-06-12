@@ -9,7 +9,7 @@ interface SkillItemProps {
   name: string
   description?: string
   experience: string // "2 anos", "6+ anos", etc.
-  category?: 'frontend' | 'backend' | 'database' | 'tools' | 'other'
+  category?: 'frontend' | 'backend' | 'database' | 'tools' | 'ai' | 'other'
   animated?: boolean
   variant?: 'default' | 'compact' | 'detailed'
 }
@@ -28,6 +28,7 @@ const SkillItem = ({
     backend: 'text-accent-purple',
     database: 'text-accent-yellow',
     tools: 'text-text-accent',
+    ai: 'text-accent-green',
     other: 'text-text-secondary'
   }
   
@@ -36,6 +37,7 @@ const SkillItem = ({
     backend: 'Backend',
     database: 'Database',
     tools: 'Ferramentas',
+    ai: 'IA & ML',
     other: 'Outros'
   }
 
