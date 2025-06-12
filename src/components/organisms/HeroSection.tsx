@@ -5,8 +5,8 @@ import { ChevronRight, Github, Linkedin, Mail, ArrowDown } from 'lucide-react'
 import { Button, Heading, Paragraph, Text, Badge, Icon, AnimatedText } from '@/components/atoms'
 
 const skills = [
-  'React', 'Next.js', 'TypeScript', 'Node.js', 
-  'Python', 'Tailwind CSS', 'PostgreSQL', 'MongoDB'
+  'React', 'Next.js', 'Angular', 'TypeScript', 'Node.js', 
+  'Python', 'GCP', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'Redis'
 ]
 
 const socialLinks = [
@@ -77,17 +77,6 @@ const HeroSection = () => {
 
       <div className="container-custom relative z-10">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Text color="secondary" className="text-lg mb-4">
-              👋 Olá, eu sou
-            </Text>
-          </motion.div>
-
           {/* Main Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -95,7 +84,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Heading as="h1" variant="hero" className="mb-6">
-              <span className="text-text-accent">Raul</span>
+              <span className="text-text-accent">Raul Franck</span>
               <br />
               <span className="gradient-text">Full Stack Developer</span>
             </Heading>
@@ -110,8 +99,7 @@ const HeroSection = () => {
           >
             <Paragraph variant="lead" color="secondary">
               <AnimatedText delay={0.8}>
-                Desenvolvedor apaixonado por criar experiências digitais incríveis 
-                usando tecnologias modernas e design centrado no usuário.
+                Desenvolvedor Full Stack com foco em performance, design funcional e código limpo. Ajudo empresas e pessoas a tirarem projetos do papel com agilidade, estratégia e tecnologia de ponta.
               </AnimatedText>
             </Paragraph>
           </motion.div>
@@ -214,15 +202,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 2.8 }}
           >
-            <motion.button
-              onClick={() => scrollToSection('sobre')}
-              className="flex flex-col items-center space-y-2 text-text-secondary hover:text-accent-green transition-colors duration-300"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Text variant="small">Scroll para descobrir mais</Text>
-              <Icon icon={ArrowDown} size="sm" />
-            </motion.button>
           </motion.div>
         </div>
       </div>
