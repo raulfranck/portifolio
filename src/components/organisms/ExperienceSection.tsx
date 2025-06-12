@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Briefcase, Calendar, MapPin, Award, ExternalLink } from 'lucide-react'
+import { Briefcase, Calendar, MapPin, ExternalLink, ChevronRight } from 'lucide-react'
 import { Heading, Text, Badge, Button } from '@/components/atoms'
 import { Modal, ExperienceItem, AnimatedTimeline, MagneticCursor } from '@/components/molecules'
 import { TechStack } from '@/components/atoms'
@@ -163,23 +163,34 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
         <div className="container-custom">
           {/* Header */}
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-12" // Ainda mais compacto no mobile
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Heading as="h2" variant="section" className="mb-4">
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 bg-accent-purple/10 text-accent-purple rounded-full mb-6 text-sm font-medium"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Briefcase size={16} />
+              Trajetória Profissional
+            </motion.div>
+            
+            <Heading as="h2" variant="section" className="mb-6">
               Experiência <span className="gradient-text">Profissional</span>
             </Heading>
-            <Text variant="body" color="secondary" className="max-w-2xl mx-auto">
+            <Text variant="body" color="secondary" className="max-w-2xl mx-auto text-lg">
               Mais de 5 anos de experiência em desenvolvimento web, trabalhando com tecnologias modernas 
               e contribuindo para projetos de diferentes escalas e complexidades.
             </Text>
           </motion.div>
 
-          {/* Animated Timeline */}
-          <div className="relative max-w-6xl mx-auto" data-magnetic>
+          {/* Animated Timeline - Desktop Only */}
+          <div className="hidden md:block relative max-w-6xl mx-auto" data-magnetic>
             <AnimatedTimeline className="py-8">
               {experiences.map((experience, index) => (
                 <ExperienceItem
@@ -193,44 +204,96 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
             </AnimatedTimeline>
           </div>
 
-          {/* Summary Stats */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="text-center p-6 bg-bg-secondary rounded-xl border border-bg-tertiary">
-              <Briefcase className="w-8 h-8 text-accent-green mx-auto mb-4" />
-              <div className="text-3xl font-bold text-text-accent mb-2">
-                {experiences.length}
-              </div>
-              <Text variant="small" color="secondary">
-                Experiências Profissionais
-              </Text>
-            </div>
-            
-            <div className="text-center p-6 bg-bg-secondary rounded-xl border border-bg-tertiary">
-              <Award className="w-8 h-8 text-accent-purple mx-auto mb-4" />
-              <div className="text-3xl font-bold text-text-accent mb-2">
-                {experiences.reduce((acc, exp) => acc + exp.achievements.length, 0)}+
-              </div>
-              <Text variant="small" color="secondary">
-                Conquistas Importantes
-              </Text>
-            </div>
-            
-            <div className="text-center p-6 bg-bg-secondary rounded-xl border border-bg-tertiary">
-              <Calendar className="w-8 h-8 text-accent-yellow mx-auto mb-4" />
-              <div className="text-3xl font-bold text-text-accent mb-2">
-                5+
-              </div>
-              <Text variant="small" color="secondary">
-                Anos de Experiência
-              </Text>
-            </div>
-          </motion.div>
+          {/* Mobile Simple Cards */}
+          <div className="block md:hidden space-y-6">
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={experience.id}
+                className="bg-gradient-to-br from-bg-secondary to-bg-tertiary border border-bg-tertiary rounded-xl p-6 cursor-pointer group hover:border-accent-green/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => handleExperienceClick(experience)}
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1 min-w-0">
+                    <Heading as="h3" variant="card" className="mb-2 group-hover:text-accent-green transition-colors">
+                      {experience.title}
+                    </Heading>
+                    <div className="flex items-center gap-2 mb-3">
+                      <Text variant="body" className="font-medium text-text-accent">
+                        {experience.company}
+                      </Text>
+                      {experience.companyUrl && (
+                        <ExternalLink 
+                          size={14} 
+                          className="text-text-secondary hover:text-accent-green transition-colors" 
+                        />
+                      )}
+                    </div>
+                  </div>
+                  
+                  {experience.current && (
+                    <Badge variant="success" size="sm">
+                      Atual
+                    </Badge>
+                  )}
+                </div>
+
+                {/* Meta Info */}
+                <div className="flex flex-col gap-2 mb-4">
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <Calendar size={14} className="text-accent-green" />
+                    <Text variant="small">
+                      {formatPeriod(experience.startDate, experience.endDate, experience.current)}
+                    </Text>
+                    <span className="text-text-secondary">•</span>
+                    <Text variant="small">
+                      {calculateDuration(experience.startDate, experience.endDate, experience.current)}
+                    </Text>
+                  </div>
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <MapPin size={14} className="text-accent-purple" />
+                    <Text variant="small">{experience.location}</Text>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <Text variant="body" color="secondary" className="line-clamp-2 leading-relaxed">
+                    {experience.description}
+                  </Text>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-4">
+                  <TechStack 
+                    technologies={experience.technologies} 
+                    size="sm" 
+                    maxVisible={6}
+                    animated={false}
+                  />
+                </div>
+
+                {/* CTA */}
+                <div className="flex items-center justify-between pt-3 border-t border-bg-tertiary/50">
+                  <Text variant="small" color="secondary" className="opacity-70 group-hover:opacity-100 transition-opacity">
+                    Toque para ver detalhes
+                  </Text>
+                  <ChevronRight 
+                    size={16} 
+                    className="text-text-secondary group-hover:text-accent-green transition-all" 
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+
         </div>
       </section>
 
