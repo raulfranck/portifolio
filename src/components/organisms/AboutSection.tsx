@@ -114,7 +114,7 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-bg-secondary">
                   <Image
                     src="/62077452.jpeg"
-                    alt="Raul - Desenvolvedor Full Stack"
+                    alt="Raul Franck - Desenvolvedor Full Stack"
                     width={400}
                     height={400}
                     className="w-full h-full object-cover"

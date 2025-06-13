@@ -5,10 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Meu Portfólio | Desenvolvedor Full Stack',
-  description: 'Portfólio pessoal showcasing projetos e habilidades em desenvolvimento web',
-  keywords: ['portfólio', 'desenvolvedor', 'web development', 'next.js', 'react'],
-  authors: [{ name: 'Raul' }],
+  title: 'Raul Franck | Desenvolvedor Full Stack & IA',
+  description: 'Desenvolvedor Full Stack especializado em soluções inteligentes com IA, React, Next.js, Node.js e Machine Learning',
+  keywords: ['Raul Franck', 'desenvolvedor', 'full stack', 'IA', 'machine learning', 'react', 'next.js', 'node.js'],
+  authors: [{ name: 'Raul Franck' }],
 }
 
 export default function RootLayout({
@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/logo-minimalista.png" />
+      </head>
       <body className={inter.className}>
         {children}
       </body>

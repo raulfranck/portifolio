@@ -76,7 +76,7 @@ Observabilidade e Monitoramento:
 • Sistema de alertas detectando 99.9% dos problemas
 
 O projeto foi desenvolvido especificamente para validar conceitos de monitoramento de aplicações Node.js em produção e demonstrar expertise em desenvolvimento full-stack, DevOps e observabilidade.`,
-    image: '/dash-brain-agriculture.png',
+    image: '/brain-agriculture/dash-brain-agriculture.png',
     images: [
       '/brain-agriculture/dash-brain-agriculture.png',
       '/brain-agriculture/cadastro-fazendas.png',
