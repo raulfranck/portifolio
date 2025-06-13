@@ -4,10 +4,9 @@ import { motion } from 'framer-motion'
 
 interface SectionSeparatorProps {
   className?: string
-  variant?: 'default' | 'gradient' | 'minimal'
 }
 
-const SectionSeparator = ({ className = '', variant = 'default' }: SectionSeparatorProps) => {
+const SectionSeparator = ({ className = '' }: SectionSeparatorProps) => {
   return (
     <div className={`relative py-16 overflow-hidden ${className}`}>
       {/* Background Geometric Shapes */}
@@ -86,46 +85,6 @@ const SectionSeparator = ({ className = '', variant = 'default' }: SectionSepara
           }}
         />
       </div>
-
-      {/* Separator Line */}
-      {variant === 'gradient' && (
-        <motion.div
-          className="relative h-px bg-gradient-to-r from-transparent via-accent-green/30 to-transparent mx-auto max-w-xs"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-        >
-          {/* Glowing effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-green/50 to-transparent blur-sm" />
-        </motion.div>
-      )}
-
-      {variant === 'minimal' && (
-        <motion.div
-          className="flex items-center justify-center space-x-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <motion.div
-            className="w-2 h-2 bg-accent-green rounded-full"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-          <motion.div
-            className="w-2 h-2 bg-accent-purple rounded-full"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-          />
-          <motion.div
-            className="w-2 h-2 bg-accent-yellow rounded-full"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-          />
-        </motion.div>
-      )}
     </div>
   )
 }

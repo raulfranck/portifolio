@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, Calendar, MapPin, ExternalLink, ChevronRight } from 'lucide-react'
 import { Heading, Text, Badge, Button } from '@/components/atoms'
-import { Modal, ExperienceItem, AnimatedTimeline, MagneticCursor } from '@/components/molecules'
+import { RadixModal, ExperienceItem, AnimatedTimeline, MagneticCursor } from '@/components/molecules'
 import { TechStack } from '@/components/atoms'
 
 interface Experience {
@@ -298,7 +298,7 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
       </section>
 
       {/* Modal de Detalhes */}
-      <Modal
+      <RadixModal
         isOpen={isModalOpen}
         onClose={closeModal}
         title={selectedExperience ? `${selectedExperience.title} | ${selectedExperience.company}` : ''}
@@ -398,7 +398,7 @@ const ExperienceSection = ({ className = '' }: ExperienceSectionProps) => {
             </div>
           </div>
         )}
-      </Modal>
+      </RadixModal>
     </>
   )
 }

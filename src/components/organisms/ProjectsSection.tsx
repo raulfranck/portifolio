@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Heading, Text, Button, TechStack } from '@/components/atoms'
-import { ProjectCard, Modal } from '@/components/molecules'
+import { ProjectCard, RadixModal } from '@/components/molecules'
 import { ExternalLink, Filter, Grid, List } from 'lucide-react'
 import { Project } from '@/lib/types'
 
@@ -412,7 +412,7 @@ const ProjectsSection = ({ showAll = true, className = '' }: ProjectsSectionProp
       </div>
 
       {/* Modal de Detalhes do Projeto */}
-      <Modal
+      <RadixModal
         isOpen={isModalOpen}
         onClose={closeModal}
         title={selectedProject ? selectedProject.title : ''}
@@ -585,7 +585,7 @@ const ProjectsSection = ({ showAll = true, className = '' }: ProjectsSectionProp
             </div>
           </div>
         )}
-      </Modal>
+      </RadixModal>
     </section>
   )
 }

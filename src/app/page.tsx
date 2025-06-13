@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {/* Global Geometric Background */}
-      <GeometricBackground density="low" variant="floating" className="fixed inset-0 z-0" />
+      <GeometricBackground density="low" variant="floating" className="fixed inset-0 z-[-1]" />
       
       {/* Navigation */}
       <Navbar />
@@ -27,43 +27,43 @@ export default function Home() {
       <HeroSection />
       
       {/* Main Content */}
-      <main className="relative z-10 bg-bg-primary/95 backdrop-blur-sm">
+      <main className="relative z-[1] bg-bg-primary/95 backdrop-blur-sm">
         
         {/* About Section */}
         <AboutSection />
         
         {/* Separator */}
-        <SectionSeparator variant="gradient" />
+        <SectionSeparator />
 
         {/* Skills Section */}
         <SkillsSection />
         
         {/* Separator */}
-        <SectionSeparator variant="minimal" />
+        <SectionSeparator />
 
         {/* Experience Section */}
         <ExperienceSection />
         
         {/* Separator */}
-        <SectionSeparator variant="default" />
+        <SectionSeparator />
 
         {/* Projects Section */}
         <ProjectsSection showAll={false} />
         
         {/* Separator */}
-        <SectionSeparator variant="gradient" />
+        <SectionSeparator />
 
         {/* Blog Section */}
         <BlogSection />
         
         {/* Separator */}
-        <SectionSeparator variant="minimal" />
+        <SectionSeparator />
 
         {/* YouTube Section */}
         <YouTubeSection />
         
         {/* Separator */}
-        <SectionSeparator variant="default" />
+        <SectionSeparator />
 
         {/* Contact Section */}
         <ContactSection />
