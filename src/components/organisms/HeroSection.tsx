@@ -279,12 +279,14 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Heading as="h1" variant="hero" className="gradient-text mb-4">
+            <Heading as="h1" variant="hero" className="text-text-accent mb-4">
               Raul Franck
             </Heading>
             
-            <Heading as="h2" variant="hero" className="text-text-accent">
-              Full Stack Developer
+            <Heading as="h2" variant="hero" className="mb-4">
+              <span className="bg-gradient-to-r from-accent-green to-accent-purple bg-clip-text text-transparent">
+                Full Stack Developer
+              </span>
             </Heading>
           </motion.div>
 
