@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'Raul Franck Portfolio',
     images: [
       {
-        url: '/logo-minimalista.png',
+        url: 'https://www.raulfranck.com/logo-minimalista.png',
         width: 1200,
         height: 630,
         alt: 'Raul Franck - Desenvolvedor Full Stack & IA',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Raul Franck | Desenvolvedor Full Stack & IA',
     description: 'Desenvolvedor Full Stack especializado em soluções inteligentes com IA, React, Next.js, Node.js e Machine Learning',
-    images: ['/logo-minimalista.png'],
+    images: ['https://www.raulfranck.com/logo-minimalista.png'],
   },
   robots: {
     index: true,
