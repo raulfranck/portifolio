@@ -32,38 +32,15 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'raul@example.com',
-      href: 'mailto:raul@example.com',
-      description: 'Respondo em até 24h'
+      value: 'raulengfranck@gmail.com',
+      href: 'mailto:raulengfranck@gmail.com',
+      description: 'Respondo em até 12h'
     },
-    {
-      icon: Phone,
-      label: 'WhatsApp',
-      value: '+55 (11) 99999-9999',
-      href: 'https://wa.me/5511999999999',
-      description: 'Segunda a Sexta, 9h às 18h'
-    },
-    {
-      icon: MapPin,
-      label: 'Localização',
-      value: 'São Paulo, Brasil',
-      href: 'https://maps.google.com',
-      description: 'Atendo presencial e remoto'
-    },
-    {
-      icon: Calendar,
-      label: 'Agenda',
-      value: 'Agendar reunião',
-      href: 'https://calendly.com',
-      description: 'Vamos conversar sobre seu projeto'
-    }
   ]
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: MessageSquare, href: 'https://discord.com', label: 'Discord' }
+    { icon: Github, href: 'https://github.com/raulfranck', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/raulfranck/', label: 'LinkedIn' },
   ]
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
@@ -301,6 +278,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                         <Text variant="body" color="accent" className="mb-1">
                           {info.value}
                         </Text>
+                        <br />
                         <Text variant="small" color="secondary">
                           {info.description}
                         </Text>
@@ -323,7 +301,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                 Redes Sociais
               </Heading>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.div
                     key={social.label}
@@ -346,7 +324,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             </motion.div>
 
             {/* Response Time */}
-            <motion.div
+           {/*  <motion.div
               className="p-6 bg-gradient-to-r from-accent-green/10 to-accent-purple/10 rounded-xl border border-accent-green/20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -363,7 +341,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                 Normalmente respondo emails em até <span className="text-accent-green font-semibold">24 horas</span>. 
                 Para projetos urgentes, entre em contato via WhatsApp.
               </Text>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

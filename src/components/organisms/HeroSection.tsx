@@ -10,9 +10,9 @@ const skills = [
 ]
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:contato@raul.dev', label: 'Email' }
+  { icon: Github, href: 'https://github.com/raulfranck', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/raulfranck/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:raulengfranck@gmail.com', label: 'Email' }
 ]
 
 const HeroSection = () => {

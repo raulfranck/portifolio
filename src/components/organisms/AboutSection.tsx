@@ -257,13 +257,6 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
               transition={{ duration: 0.6, delay: 2 }}
             >
               <Button
-                variant="primary"
-                leftIcon={<Download size={18} />}
-                className="flex-1 sm:flex-initial hover:scale-105 transition-transform duration-200"
-              >
-                Download CV
-              </Button>
-              <Button
                 variant="outline"
                 leftIcon={<ExternalLink size={18} />}
                 className="flex-1 sm:flex-initial hover:scale-105 transition-transform duration-200"

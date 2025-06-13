@@ -25,75 +25,152 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: '1',
-    title: 'Senior Full Stack Developer',
-    company: 'TechInova Solutions',
+    title: 'Software Engineer',
+    company: 'DRZ Consultoria Em Serviços de Informática LTDA',
     location: 'São Paulo, SP - Remoto',
-    startDate: '2023-01-15',
+    startDate: '2024-02-01',
     current: true,
-    description: 'Desenvolvimento de aplicações web modernas usando React, Next.js e Node.js. Liderança técnica de uma equipe de 5 desenvolvedores.',
-    fullDescription: `Como Senior Full Stack Developer na TechInova Solutions, atuo no desenvolvimento de aplicações web de alta complexidade, utilizando tecnologias modernas como React, Next.js, TypeScript e Node.js.
+    description: 'Foco no desenvolvimento de soluções com LLMs (Large Language Models), LangChain e Machine Learning, atuando na criação e integração de modelos de inteligência artificial em aplicações diversas e escaláveis.',
+    fullDescription: `Como Software Engineer na DRZ Consultoria, atuo no desenvolvimento de soluções avançadas com LLMs (Large Language Models), LangChain e Machine Learning.
 
 Principais responsabilidades:
-• Liderança técnica de uma equipe de 5 desenvolvedores júnior e pleno
-• Arquitetura e desenvolvimento de soluções escaláveis para e-commerce
-• Implementação de práticas de CI/CD e DevOps
-• Mentoria e code review para garantir qualidade do código`,
-    technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+• Criação e integração de modelos de inteligência artificial em aplicações escaláveis
+• Desenvolvimento de sistemas completos com Node.js no backend e Vue.js/React no frontend
+• Trabalho com infraestrutura em nuvem (GCP, Huawei Cloud, Microsoft Azure)
+• Implementação de soluções com Docker e Kubernetes para conteinerização
+• Desenvolvimento de pipelines automatizadas com CI/CD
+• Foco na experiência do usuário e otimização de processos`,
+    technologies: ['LLMs', 'LangChain', 'Machine Learning', 'Node.js', 'Vue.js', 'React', 'GCP', 'Huawei Cloud', 'Azure', 'Docker', 'Kubernetes', 'CI/CD'],
     achievements: [
-      'Melhoria de 40% na performance das aplicações',
-      'Implementação de arquitetura de microserviços',
-      'Mentoria que resultou na promoção de 3 desenvolvedores',
-      'Liderança no desenvolvimento de plataforma que aumentou conversão em 25%'
-    ],
-    companyUrl: 'https://techinova.com'
+      'Desenvolvimento de soluções inovadoras com IA generativa',
+      'Integração de modelos de linguagem em aplicações escaláveis',
+      'Implementação de infraestrutura multi-cloud',
+      'Otimização de processos com automação CI/CD'
+    ]
   },
   {
     id: '2',
-    title: 'Full Stack Developer',
-    company: 'Startup Digital',
+    title: 'Fullstack Developer',
+    company: 'TaxData Inovação em Tecnologia LTDA',
     location: 'São Paulo, SP',
-    startDate: '2021-08-10',
-    endDate: '2022-12-20',
-    description: 'Desenvolvimento de MVP e produtos digitais para startups. Foco em desenvolvimento ágil e prototipagem rápida.',
-    fullDescription: `Na Startup Digital, trabalhei no desenvolvimento de MVPs e produtos digitais para diversas startups em diferentes segmentos.
+    startDate: '2024-05-01',
+    endDate: '2024-12-31',
+    description: 'Responsável pelo desenvolvimento de páginas web responsivas, com foco em escalabilidade, performance e qualidade. Atuação em todo o ciclo do projeto, desde a concepção até o lançamento do MVP.',
+    fullDescription: `Na TaxData, atuei como Fullstack Developer responsável pelo desenvolvimento completo de aplicações web escaláveis.
 
 Principais atividades:
-• Desenvolvimento full-stack de aplicações web responsivas
-• Criação de APIs RESTful robustas e documentadas
-• Implementação de sistemas de autenticação e autorização
-• Integração com serviços terceiros (pagamentos, emails, etc.)`,
-    technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
+• Desenvolvimento de páginas web responsivas com foco em performance
+• Atuação em todo ciclo do projeto: concepção, desenvolvimento e lançamento do MVP
+• Criação dos principais fluxos de negócio da aplicação
+• Aplicação de boas práticas de componentização e organização de código
+• Integração de testes automatizados com Cypress no GitHub Actions
+• Otimização de performance e experiência do usuário com foco em SEO`,
+    technologies: ['Remix', 'Tailwind CSS', 'ShadCN', 'Zod', 'Redux', 'Node.js', 'PostgreSQL', 'Google Cloud', 'Cypress'],
     achievements: [
-      'Desenvolvimento de 8 MVPs em 16 meses',
-      'Implementação de sistema de pagamentos que processou R$ 2M+',
-      'Redução de 50% no tempo de desenvolvimento',
-      'Criação de biblioteca interna de componentes reutilizáveis'
-    ],
-    companyUrl: 'https://startupdigital.com'
+      'Desenvolvimento completo do MVP da aplicação principal',
+      'Implementação de testes automatizados para fluxos críticos',
+      'Otimização de performance e SEO',
+      'Arquitetura escalável de frontend com componentização'
+    ]
   },
   {
     id: '3',
-    title: 'Frontend Developer',
-    company: 'WebCorp Agency',
-    location: 'Santos, SP',
-    startDate: '2020-03-01',
-    endDate: '2021-07-30',
-    description: 'Especialização em desenvolvimento frontend com React e Vue.js. Criação de interfaces modernas e responsivas.',
-    fullDescription: `Na WebCorp Agency, atuei como Frontend Developer especializado em criar experiências digitais excepcionais para clientes de diversos segmentos.
+    title: 'Frontend Engineer',
+    company: 'Company Hero LTDA',
+    location: 'São Paulo, SP',
+    startDate: '2023-10-01',
+    endDate: '2024-05-31',
+    description: 'Desenvolvimento de interfaces responsivas e de alto desempenho em colaboração com equipes multidisciplinares. Experiência em ambientes ágeis com metodologia Scrum.',
+    fullDescription: `Na Company Hero, atuei como Frontend Engineer desenvolvendo interfaces modernas e performáticas em ambiente ágil.
+
+Principais responsabilidades:
+• Desenvolvimento de interfaces responsivas e de alto desempenho
+• Colaboração com equipes multidisciplinares de design e produto
+• Trabalho em ambiente ágil com metodologia Scrum
+• Implementação de testes end-to-end com Cypress integrados ao CI/CD
+• Utilização do Figma para prototipação e colaboração com design
+• Monitoramento e análise de logs com Kibana e ElasticSearch`,
+    technologies: ['JavaScript', 'React.js', 'Next.js', 'AntDesign', 'GitHub Actions', 'Cypress', 'Figma', 'Kibana', 'ElasticSearch'],
+    achievements: [
+      'Desenvolvimento de interfaces de alto desempenho',
+      'Implementação de testes automatizados end-to-end',
+      'Colaboração efetiva com equipes de design usando Figma',
+      'Monitoramento proativo de aplicações em produção'
+    ]
+  },
+  {
+    id: '4',
+    title: 'Fullstack Developer',
+    company: 'GFT BRASIL CONSULTORIA DE INFORMÁTICA LTDA',
+    location: 'São Paulo, SP',
+    startDate: '2022-04-01',
+    endDate: '2023-09-30',
+    description: 'Atuação no projeto AppInvest do Banco Safra, com foco em aplicações financeiras de alto desempenho e alta segurança. Desenvolvimento de aplicações utilizando Angular, Ionic, Node.js e ASP.NET Core.',
+    fullDescription: `Na GFT, trabalhei no desenvolvimento do projeto AppInvest do Banco Safra, uma aplicação financeira crítica que exige alto desempenho e segurança.
+
+Principais atividades:
+• Desenvolvimento de aplicações financeiras com Angular e Ionic
+• Criação de APIs robustas com Node.js e ASP.NET Core
+• Utilização de Azure DevOps para CI/CD e gestão de projetos
+• Implementação de testes unitários com Jest e cobertura com SonarQube
+• Conteinerização de aplicações com Docker
+• Monitoramento de logs e observabilidade com Kibana`,
+    technologies: ['Angular', 'Ionic', 'Node.js', 'ASP.NET Core', 'Azure DevOps', 'Docker', 'CI/CD', 'Jest', 'SonarQube', 'Kibana'],
+    achievements: [
+      'Contribuição para aplicação financeira crítica do Banco Safra',
+      'Implementação de práticas de qualidade com testes e cobertura',
+      'Automação de processos com Azure DevOps',
+      'Melhoria na observabilidade das aplicações'
+    ]
+  },
+  {
+    id: '5',
+    title: 'Desenvolvedor FrontEnd',
+    company: 'Dotz Inc. S.A.',
+    location: 'São Paulo, SP',
+    startDate: '2021-06-01',
+    endDate: '2022-04-30',
+    description: 'Participação no desenvolvimento do novo site da Dotz, do início do projeto até o lançamento em produção. Criação de componentes reutilizáveis e micro-frontends com Angular.',
+    fullDescription: `Na Dotz, participei do desenvolvimento completo do novo site da empresa, desde a concepção até o lançamento em produção.
+
+Principais contribuições:
+• Desenvolvimento do novo site da Dotz do zero até produção
+• Criação de componentes reutilizáveis e micro-frontends com Angular
+• Gerenciamento de estado complexo com NgRx
+• Colaboração estreita com equipes de design e produto
+• Utilização de Sass para estilização avançada
+• Integração com Prismic CMS para gestão de conteúdo`,
+    technologies: ['Angular', 'Sass', 'Prismic CMS', 'NgRx', 'Micro-frontends', 'Design System'],
+    achievements: [
+      'Lançamento bem-sucedido do novo site da Dotz',
+      'Desenvolvimento de arquitetura de micro-frontends',
+      'Criação de design system interno',
+      'Colaboração efetiva entre equipes técnicas e de produto'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Software Developer',
+    company: '7COMm Informática LTDA',
+    location: 'São Paulo, SP',
+    startDate: '2020-10-01',
+    endDate: '2021-06-30',
+    description: 'Desenvolvimento de soluções front-end para o Bradesco, com foco na plataforma de investimentos Ágora e no sistema BGSL (Bradesco Global Solution).',
+    fullDescription: `Na 7COMm, trabalhei no desenvolvimento de soluções front-end críticas para o Bradesco, contribuindo para sistemas financeiros de grande escala.
 
 Principais projetos:
-• Sites institucionais e e-commerces para grandes marcas
-• Aplicações web complexas com foco em UX/UI
-• Desenvolvimento de SPAs (Single Page Applications)
-• Otimização de performance e SEO`,
-    technologies: ['React', 'Vue.js', 'JavaScript', 'SASS', 'Webpack', 'Git'],
+• Desenvolvimento para a plataforma de investimentos Ágora do Bradesco
+• Contribuição no sistema BGSL (Bradesco Global Solution)
+• Utilização de Angular 2+ com TypeScript para aplicações robustas
+• Implementação de testes unitários com Jest
+• Desenvolvimento com foco em performance e segurança`,
+    technologies: ['Angular 2+', 'TypeScript', 'HTML', 'Sass', 'Jest', 'Sistemas Financeiros'],
     achievements: [
-      'Desenvolvimento de mais de 20 projetos web',
-      'Melhoria média de 35% no Page Speed Score',
-      'Implementação de metodologia de CSS modular',
-      'Reconhecimento como "Desenvolvedor do Mês" por 3 vezes'
-    ],
-    companyUrl: 'https://webcorp.com.br'
+      'Contribuição para sistemas críticos do Bradesco',
+      'Desenvolvimento de aplicações financeiras seguras',
+      'Implementação de boas práticas de teste',
+      'Manutenção de código em ambiente de alta disponibilidade'
+    ]
   }
 ]
 
