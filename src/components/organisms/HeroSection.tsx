@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { ChevronRight, Github, Linkedin, Mail, ArrowDown } from 'lucide-react'
 import { Button, Heading, Paragraph, Text, Badge, Icon, AnimatedText } from '@/components/atoms'
-import Image from 'next/image'
 
 const skills = [
   'React', 'Next.js', 'Angular', 'TypeScript', 'Node.js', 
@@ -279,34 +278,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col items-center"
           >
-            {/* Logo com nome */}
-            <motion.div 
-              className="flex items-center gap-4 mb-4"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <motion.div
-                className="relative w-16 h-16"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Image
-                  src="/logo-minimalista.png"
-                  alt="Raul Franck Logo"
-                  fill
-                  className="object-contain"
-                />
-              </motion.div>
-              <Heading as="h1" variant="hero" className="text-text-accent">
-                Raul Franck
-              </Heading>
-            </motion.div>
+            <Heading as="h1" variant="hero" className="gradient-text mb-4">
+              Raul Franck
+            </Heading>
             
-            {/* Subtitle profissional */}
-            <Heading as="h2" variant="hero" className="gradient-text">
+            <Heading as="h2" variant="hero" className="text-text-accent">
               Full Stack Developer
             </Heading>
           </motion.div>
