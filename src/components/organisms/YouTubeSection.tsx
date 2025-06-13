@@ -234,44 +234,7 @@ const YouTubeSection = ({ showAll = false, className = '' }: YouTubeSectionProps
             </Text>
           </div>
         </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          className="text-center p-12 bg-gradient-to-r from-bg-secondary to-bg-tertiary rounded-2xl border border-bg-tertiary"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 1 }}
-        >
-          <Youtube className="w-12 h-12 text-red-500 mx-auto mb-6" />
-          <Heading as="h3" variant="subsection" className="mb-4">
-            Se Inscreva no Canal
-          </Heading>
-          <Text variant="body" color="secondary" className="mb-8 max-w-2xl mx-auto">
-            Publico regularmente tutoriais de desenvolvimento web, projetos completos e 
-            dicas práticas. Ative o sininho para não perder nenhum vídeo!
-          </Text>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="primary"
-              leftIcon={<Youtube size={18} />}
-              onClick={() => window.open('https://youtube.com/@channel', '_blank')}
-              className="bg-red-600 hover:bg-red-700 border-red-600"
-            >
-              Se Inscrever
-            </Button>
-            {!showAll && (
-              <Button
-                variant="outline"
-                rightIcon={<ArrowRight size={18} />}
-                onClick={() => window.open('/videos', '_blank')}
-              >
-                Ver Todos os Vídeos
-              </Button>
-            )}
-          </div>
-        </motion.div>
+      
       </div>
     </section>
   )

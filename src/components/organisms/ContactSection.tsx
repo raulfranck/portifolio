@@ -94,8 +94,67 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
   const isFormValid = formData.name && formData.email && formData.message
 
   return (
-    <section id="contato" className={`section-spacing ${className}`}>
-      <div className="container-custom">
+    <section id="contato" className={`section-spacing relative overflow-hidden ${className}`}>
+      {/* Background Geometric Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-24 right-12 w-20 h-20 border border-accent-yellow/15 rounded-xl"
+          animate={{
+            rotate: [0, 45, 90, 135, 180, 225, 270, 315, 360],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-16 left-10 w-16 h-16 bg-accent-green/6 rounded-full blur-lg"
+          animate={{
+            y: [0, -30, 0],
+            x: [0, 15, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/2 left-16 w-10 h-10 bg-accent-purple/8 rounded-lg blur-sm"
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-20 left-1/3 w-4 h-4 bg-accent-yellow/20 rounded-full"
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.4, 1, 0.4]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        />
+      </div>
+      
+      <div className="container-custom relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

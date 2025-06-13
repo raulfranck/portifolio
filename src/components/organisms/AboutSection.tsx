@@ -150,20 +150,6 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
                   6+ Anos
                 </Badge>
               </motion.div>
-
-              <motion.div
-                className="absolute top-1/2 -right-8 lg:-right-12"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 1.2, type: 'spring', stiffness: 200 }}
-                whileHover={{ scale: 1.2 }}
-              >
-                <Badge variant="outline" className="shadow-2xl backdrop-blur-sm bg-bg-primary/80">
-                  <Sparkles size={14} className="mr-1 text-accent-yellow" />
-                  IA Expert
-                </Badge>
-              </motion.div>
             </div>
 
             {/* Enhanced Location & Status */}

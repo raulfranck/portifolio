@@ -99,8 +99,67 @@ const SkillsSection = ({ showDetailed = true, className = '' }: SkillsSectionPro
     : skillsData.filter(skill => skill.category === selectedCategory)
 
   return (
-    <section id="tecnologias" className={`section-spacing ${className}`}>
-      <div className="container-custom">
+    <section id="tecnologias" className={`section-spacing relative overflow-hidden ${className}`}>
+      {/* Background Geometric Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-16 left-12 w-20 h-20 border border-accent-green/10 rounded-full"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-20 right-16 w-14 h-14 bg-accent-purple/8 rounded-xl blur-sm"
+          animate={{
+            y: [0, -25, 0],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/3 right-20 w-8 h-8 bg-accent-yellow/12 rounded-lg"
+          animate={{
+            x: [0, 20, 0],
+            y: [0, -15, 0],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2.5
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/3 left-20 w-6 h-6 border border-accent-green/15 rounded-full"
+          animate={{
+            scale: [1, 1.4, 1],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        />
+      </div>
+      
+      <div className="container-custom relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

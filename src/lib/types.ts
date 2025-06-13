@@ -25,11 +25,18 @@ export interface Project {
   id: string
   title: string
   description: string
-  image: string
+  fullDescription?: string
+  image?: string
+  images?: string[]
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
   featured: boolean
+  category: 'web' | 'mobile' | 'fullstack' | 'tool'
+  status: 'completed' | 'in-progress' | 'concept'
+  highlights?: string[]
+  challenges?: string[]
+  results?: string[]
 }
 
 // Tipos para Contato

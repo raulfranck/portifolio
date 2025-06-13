@@ -141,8 +141,16 @@ const Modal = ({
             )}
 
             {/* Content */}
-            <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
-              {children}
+            <div 
+              className="overflow-y-auto max-h-[calc(90vh-120px)] custom-scrollbar"
+              style={{
+                scrollbarWidth: 'thin',
+                scrollbarColor: '#00FFC6 #2E2E33'
+              }}
+            >
+              <div className="p-8">
+                {children}
+              </div>
             </div>
           </motion.div>
         </div>
