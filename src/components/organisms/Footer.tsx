@@ -248,16 +248,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 text-center sm:text-left">
               <Text variant="small" color="secondary">
-                © {currentYear} Raul Franck. Feito com
-              </Text>
-              <motion.div
-                animate={{ scale: [1, 1.3, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <Icon icon={Heart} size="sm" className="text-red-500" />
-              </motion.div>
-              <Text variant="small" color="secondary">
-                usando Next.js e Tailwind CSS
+                © {currentYear} Feito por Raul Franck usando Next.js, Tailwind CSS e Framer Motion
               </Text>
             </div>
             
