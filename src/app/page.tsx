@@ -8,7 +8,7 @@ import {
   ProjectsSection, 
   ExperienceSection,
   BlogSection, 
-  YouTubeSection, 
+  // YouTubeSection, // Comentado temporariamente até criar o canal
   ContactSection, 
   Footer 
 } from '@/components/organisms'
@@ -59,11 +59,11 @@ export default function Home() {
         {/* Separator */}
         <SectionSeparator />
 
-        {/* YouTube Section */}
-        <YouTubeSection />
+        {/* YouTube Section - Comentado temporariamente até criar o canal */}
+        {/* <YouTubeSection /> */}
         
         {/* Separator */}
-        <SectionSeparator />
+        {/* <SectionSeparator /> */}
 
         {/* Contact Section */}
         <ContactSection />

@@ -2,6 +2,8 @@
 export { default as Card } from './Card'
 export { default as ProjectCard } from './ProjectCard'
 export { default as BlogCard } from './BlogCard'
+export { default as BlogSkeleton } from './BlogSkeleton'
+export { default as BlogError } from './BlogError'
 export { default as VideoCard } from './VideoCard'
 export { default as SkillItem } from './SkillItem'
 export { default as SocialLink } from './SocialLink'
