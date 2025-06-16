@@ -54,7 +54,7 @@ Principais responsabilidades:
     company: 'TaxData Inovação em Tecnologia LTDA',
     location: 'São Paulo, SP',
     startDate: '2024-05-01',
-    endDate: '2024-12-31',
+    endDate: '2025-1-20',
     description: 'Responsável pelo desenvolvimento de páginas web responsivas, com foco em escalabilidade, performance e qualidade. Atuação em todo o ciclo do projeto, desde a concepção até o lançamento do MVP.',
     fullDescription: `Na TaxData, atuei como Fullstack Developer responsável pelo desenvolvimento completo de aplicações web escaláveis.
 
@@ -78,7 +78,7 @@ Principais atividades:
     title: 'Frontend Engineer',
     company: 'Company Hero LTDA',
     location: 'São Paulo, SP',
-    startDate: '2023-10-01',
+    startDate: '2023-08-01',
     endDate: '2024-05-31',
     description: 'Desenvolvimento de interfaces responsivas e de alto desempenho em colaboração com equipes multidisciplinares. Experiência em ambientes ágeis com metodologia Scrum.',
     fullDescription: `Na Company Hero, atuei como Frontend Engineer desenvolvendo interfaces modernas e performáticas em ambiente ágil.
@@ -103,8 +103,8 @@ Principais responsabilidades:
     title: 'Fullstack Developer',
     company: 'GFT BRASIL CONSULTORIA DE INFORMÁTICA LTDA',
     location: 'São Paulo, SP',
-    startDate: '2022-04-01',
-    endDate: '2023-09-30',
+    startDate: '2022-05-01',
+    endDate: '2023-07-30',
     description: 'Atuação no projeto AppInvest do Banco Safra, com foco em aplicações financeiras de alto desempenho e alta segurança. Desenvolvimento de aplicações utilizando Angular, Ionic, Node.js e ASP.NET Core.',
     fullDescription: `Na GFT, trabalhei no desenvolvimento do projeto AppInvest do Banco Safra, uma aplicação financeira crítica que exige alto desempenho e segurança.
 
@@ -128,7 +128,7 @@ Principais atividades:
     title: 'Desenvolvedor FrontEnd',
     company: 'Dotz Inc. S.A.',
     location: 'São Paulo, SP',
-    startDate: '2021-06-01',
+    startDate: '2021-07-01',
     endDate: '2022-04-30',
     description: 'Participação no desenvolvimento do novo site da Dotz, do início do projeto até o lançamento em produção. Criação de componentes reutilizáveis e micro-frontends com Angular.',
     fullDescription: `Na Dotz, participei do desenvolvimento completo do novo site da empresa, desde a concepção até o lançamento em produção.
@@ -153,7 +153,7 @@ Principais contribuições:
     title: 'Software Developer',
     company: '7COMm Informática LTDA',
     location: 'São Paulo, SP',
-    startDate: '2020-10-01',
+    startDate: '2020-02-01',
     endDate: '2021-06-30',
     description: 'Desenvolvimento de soluções front-end para o Bradesco, com foco na plataforma de investimentos Ágora e no sistema BGSL (Bradesco Global Solution).',
     fullDescription: `Na 7COMm, trabalhei no desenvolvimento de soluções front-end críticas para o Bradesco, contribuindo para sistemas financeiros de grande escala.
